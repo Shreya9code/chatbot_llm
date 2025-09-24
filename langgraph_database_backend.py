@@ -17,14 +17,6 @@ load_dotenv()
 # Configure with your Gemini API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# List available models
-'''for m in genai.list_models():
-    print(m.name, " -> ", m.supported_generation_methods)
-
-client = genai.Client()
-for model in client.list_models():
-    print(model.name)'''
-
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY")
